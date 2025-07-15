@@ -5,15 +5,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 const busIcon = L.icon({
-    iconUrl: 'bus.svg',
-    iconSize: [48, 48]
+    iconUrl: 'lunchbus.png',
+    iconSize: [135, 90]
 })
 
 const marker = L.marker([0, 0], { icon: busIcon }).addTo(map);
 
 const finishIcon = L.icon({
-    iconUrl: 'finish.svg',
-    iconSize: [48, 48]
+    iconUrl: 'copernicus.webp',
+    iconSize: [60, 60]
 });
 
 const destination = L.marker([52.29202405462692, 4.726858205798323], { icon: finishIcon }).addTo(map);

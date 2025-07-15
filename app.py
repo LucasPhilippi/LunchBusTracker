@@ -36,17 +36,10 @@ def proxy_location_api():
 def serve_index():
     return send_from_directory('.', 'index.html')
 
-@app.route('/script.js')
-def serve_script():
-    return send_from_directory('.', 'script.js')
+@app.route('/<path:filename>')
+def serve_png(filename):
+    return send_from_directory('.', filename)
 
-@app.route('/finish.svg')
-def serve_png():
-    return send_from_directory('.', 'finish.svg')
-
-@app.route('/bus.svg')
-def serve_bus():
-    return send_from_directory('.', 'bus.svg')
 
 if __name__ == '__main__':
     app.run(port=8080, debug=True)
